@@ -6,7 +6,8 @@ import {
     FormGroup,
     Input,
     Label,
-    Button
+    Button,
+    Container
   } from 'reactstrap';
   import { Redirect } from 'react-router-dom';
 
@@ -52,7 +53,9 @@ class ApartmentNew extends Component{
         console.log("id", this.props.current_user.id);
         return(
             <React.Fragment>
-                <Form>
+            <h2 className="sub-headline">Add a Listing</h2>
+            <Container>
+                <Form className="edit-form">
                     <FormGroup>
                         <Label>Street</Label>
                         <Input
@@ -134,16 +137,19 @@ class ApartmentNew extends Component{
                         value={ this.state.form.pets }
                         />
                     </FormGroup>
+                    <br />
                     <Button
                         name="submit"
                         color="secondary"
                         onClick={ this.handleSubmit }
                     >
-                        Add an Apartment
+                        Submit Edit
                     </Button>
                 </Form>
-                { this.state.success && <Redirect to="/myapts"/>}
-            </React.Fragment>
+            </Container>
+            <br />
+            { this.state.success && <Redirect to="/myapts"/> }
+        </React.Fragment>
         )
     }
 }

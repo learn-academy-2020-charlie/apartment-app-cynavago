@@ -1,34 +1,53 @@
 import React, { Component } from 'react'
-import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
+import {
+  Button,
+  Card,
+  CardDeck,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardText,
+  Container,
+  CardSubtitle,
+  Col,
+  Row
+} from 'reactstrap';
 import { NavLink } from 'react-router-dom'
 
 class MyApartments extends Component{
   render(){
     return(
       <React.Fragment>
-      <h3>My Apartments</h3>
-      <Row id="cards">
-          { this.props.banana.map((apartment, index) => {
-            return (
-              <Col sm="4" key={ index }>
-                <Card body>
-                  <CardTitle>
-                    <h5>{ apartment.street }</h5>
-                    <h5>{ apartment.city }</h5>
-                    <h5>{ apartment.state }</h5>
-                    <p>
-                      <NavLink to={`/show/${apartment.id}`}>
-                        <Button color="secondary">
-                          More Info
-                        </Button>
-                      </NavLink>
-                    </p>
-                  </CardTitle>
-                </Card>
-              </Col>
-            )
-          })}
-      </Row>
+      <h2 className="sub-headline">My Apartments</h2>
+      <Container className="myapts-container">
+        <CardDeck>
+          <Row id="cards">
+              { this.props.banana.map((apartment, index) => {
+                return (
+                  <Col md="6" xs="12" key={ index }>
+                    <Card className="myapts-card">
+                      <CardTitle>
+                        <h5>{ apartment.street }</h5>
+                        <h5>{ apartment.city }, { apartment.state }</h5>
+                        <hr className="index-bar" style={{ width: "60px" }} />
+                        <h5>${ apartment.price }/month</h5>
+                        <br></br>
+                        <p>
+                          <NavLink to={`/show/${apartment.id}`}>
+                            <Button color="primary" className="btn-primary">
+                              More Info
+                            </Button>
+                          </NavLink>
+                        </p>
+                      </CardTitle>
+                    </Card>
+                  </Col>
+                )
+              })}
+          </Row>
+        </CardDeck>
+      </Container>
+      <br></br>
       </React.Fragment>
     )
   }

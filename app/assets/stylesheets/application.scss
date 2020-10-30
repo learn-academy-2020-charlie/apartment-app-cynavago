@@ -33,14 +33,15 @@
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #41C2E3;
-    border: none;
+    color: #41C2E3;
+    background-color:#fff;
+    border: 2px solid rgba(65, 194, 227, 0.1);
+    border-color: #41C2E3;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.3rem;
     padding-left: 22px;
     padding-right: 22px;
-    border-radius: 1rem;
+    border-radius: 2rem;
 }
 
 .btn-secondary {
@@ -86,13 +87,39 @@ a:hover {
     width: 5%;
 }
 
-.card {
-    border: none;
-}
 
 .card-deck {
     width: 70%;
     display: flex;
     align-content: center;
     margin: auto;
+}
+
+hr {
+    border-top: 2px solid rgba(65, 194, 227, 0.1);
+}
+
+.services-card{
+    border: none;
+}
+
+
+.card{
+    border-radius: 2rem;
+    // border: none;
+}
+
+.index-bar{
+    color: #41C2E3;
+    border-top: 2px solid rgba(65, 194, 227, 1);
+}
+
+.row{
+    align-content: center;
+    margin: auto;
+}
+
+.show-card{
+    border: none;
+    text-align: center;
 }

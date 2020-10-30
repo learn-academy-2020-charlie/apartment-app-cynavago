@@ -36,6 +36,7 @@ users.each do |attribute|
     puts "creating user #{attribute}"
 end
 
+
 # 1 THIS IS WHERE THE INFO IN THE DATABASE CAME FROM
 
 apartments =[
@@ -84,7 +85,6 @@ apartments =[
         pets: "yes"
     }
 ]
-
 
 # We are creating a variable that holds a test user from our array above and we use it to test if we can create an apartment associated to that user using the code block below
 

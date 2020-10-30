@@ -12,7 +12,8 @@ class Home extends Component{
                 <br></br>
                 <br></br>
                 <br></br>
-                <TopListings/>
+                <br></br>
+                <br></br>
             </React.Fragment>
         )
     }

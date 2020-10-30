@@ -10,8 +10,7 @@ import {
     NavItem
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
-import image from '../../../assets/images/smart-rental-logo-1.png'
-// import '../../assets/stylesheets/header.scss'
+import image from '../../../assets/images/roof-logo-1.png'
 
 class Header extends Component{
     constructor(props){
@@ -36,10 +35,10 @@ class Header extends Component{
                     <Collapse isOpen={ !this.state.collapsed } navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink to="/">All Apartments</NavLink>
-                            </NavItem>
+                            <NavLink to="/">Home</NavLink>
+                        </NavItem>
                             <NavItem>
-                            <NavLink to="/index">Add Apartments</NavLink>
+                            <NavLink to="/index">All Apartments</NavLink>
                         </NavItem>
                         { this.props.logged_in &&
                         <>

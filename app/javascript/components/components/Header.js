@@ -23,7 +23,7 @@ class Header extends Component{
                         <h1 className="headline">Find your <br/>next home.</h1>
                         <p className="body-text">Browse hundreds of apartments in your area.</p>
                         <NavLink to = {`/index`} className="hero-btn">
-                            <Button className="hero-btn">View apartments</Button>
+                            <Button className="hero-btn">Get started</Button>
                         </NavLink>
                     </Container>
                 </Jumbotron>

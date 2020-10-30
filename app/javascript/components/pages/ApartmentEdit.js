@@ -6,7 +6,8 @@ import {
     FormGroup,
     Input,
     Label,
-    Button
+    Button,
+    Container
   } from 'reactstrap';
   import { Redirect } from 'react-router-dom';
 
@@ -47,96 +48,101 @@ class ApartmentEdit extends Component{
     render(){
         return(
             <React.Fragment>
-                <Form>
-                    <FormGroup>
-                        <Label>Street</Label>
-                        <Input
-                        type="text"
-                        name="street"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.street }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>City</Label>
-                        <Input
-                        type="text"
-                        name="city"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.city }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>State</Label>
-                        <Input
-                        type="text"
-                        name="state"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.state }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>Manager</Label>
-                        <Input
-                        type="text"
-                        name="manager"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.manager }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>Email</Label>
-                        <Input
-                        type="text"
-                        name="email"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.email }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>Price</Label>
-                        <Input
-                        type="text"
-                        name="price"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.price }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>Bedrooms</Label>
-                        <Input
-                        type="number"
-                        name="bedrooms"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.bedrooms}
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>Bathrooms</Label>
-                        <Input
-                        type="number"
-                        name="bathrooms"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.bathrooms }
-                        />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label>Pets</Label>
-                        <Input
-                        type="text"
-                        name="pets"
-                        onChange={ this.handleChange }
-                        value={ this.state.form.pets }
-                        />
-                    </FormGroup>
-                    <Button
-                        name="submit"
-                        color="secondary"
-                        onClick={ this.handleSubmit }
-                    >
-                        Submit Edit
-                    </Button>
-                </Form>
+                <h2 className="sub-headline">Edit Listing</h2>
+                <Container>
+                    <Form className="edit-form">
+                        <FormGroup>
+                            <Label>Street</Label>
+                            <Input
+                            type="text"
+                            name="street"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.street }
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>City</Label>
+                            <Input
+                            type="text"
+                            name="city"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.city }
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>State</Label>
+                            <Input
+                            type="text"
+                            name="state"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.state }
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>Manager</Label>
+                            <Input
+                            type="text"
+                            name="manager"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.manager }
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>Email</Label>
+                            <Input
+                            type="text"
+                            name="email"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.email }
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>Price</Label>
+                            <Input
+                            type="text"
+                            name="price"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.price }
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>Bedrooms</Label>
+                            <Input
+                            type="number"
+                            name="bedrooms"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.bedrooms}
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>Bathrooms</Label>
+                            <Input
+                            type="number"
+                            name="bathrooms"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.bathrooms }
+                            />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label>Pets</Label>
+                            <Input
+                            type="text"
+                            name="pets"
+                            onChange={ this.handleChange }
+                            value={ this.state.form.pets }
+                            />
+                        </FormGroup>
+                        <br />
+                        <Button
+                            name="submit"
+                            color="secondary"
+                            onClick={ this.handleSubmit }
+                        >
+                            Submit Edit
+                        </Button>
+                    </Form>
+                </Container>
+                <br />
                 { this.state.success && <Redirect to={ `/show/${this.props.apartment.id}` }/> }
             </React.Fragment>
         )
