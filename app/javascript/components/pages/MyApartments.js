@@ -19,9 +19,9 @@ class MyApartments extends Component{
     return(
       <React.Fragment>
       <h2 className="sub-headline">My Apartments</h2>
-      <Container className="myapts-container">
+      {/* <Container fluid> */}
         <CardDeck>
-          <Row id="cards">
+          <Row>
               { this.props.banana.map((apartment, index) => {
                 return (
                   <Col md="6" xs="12" key={ index }>
@@ -46,7 +46,7 @@ class MyApartments extends Component{
               })}
           </Row>
         </CardDeck>
-      </Container>
+      {/* </Container> */}
       <br></br>
       </React.Fragment>
     )

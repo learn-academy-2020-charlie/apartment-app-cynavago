@@ -24,8 +24,8 @@ class ApartmentShow extends Component{
     }
   }
 
-  handleClick = (e) => {
-    // e.preventDefault()
+  handleSubmit = (e) => {
+    e.preventDefault()
     this.props.deleteApt(this.props.apartment.id);
     this.setState({ success: true })
     console.log("Apartment deleted")
@@ -71,7 +71,7 @@ class ApartmentShow extends Component{
                           </NavLink>
                           <br />
                           <br />
-                          <Button color="primary" className="btn-primary" onClick = {this.handleClick}>
+                          <Button color="primary" className="btn-primary" onClick = {this.handleSubmit}>
                             Delete Listing
                           </Button>
                         </>
@@ -89,6 +89,7 @@ class ApartmentShow extends Component{
         </Row>
       </CardDeck>
       <br />
+      { this.state.success && <Redirect to="/index"/> }
       </React.Fragment>
     )}
 }

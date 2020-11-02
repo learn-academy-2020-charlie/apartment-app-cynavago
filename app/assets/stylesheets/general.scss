@@ -117,10 +117,12 @@
     border: 4px solid rgba(0, 0, 0, 0.3);
     padding-top: 9%;
     padding-bottom: 3%;
+    // padding: 9% 10% 3% 10%;
     text-align: center;
     margin: 5%;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
     border-radius: 2rem;
+    width: 250px;
 }
 
 .myapts-deck{
@@ -128,9 +130,9 @@
     align-content: center;
 }
 
-.myapts-container{
-    width: 100%;
-}
+// .myapts-container{
+//     width: 100%;
+// }
 
 .show-title{
     font-family: 'Montserrat', sans-serif;

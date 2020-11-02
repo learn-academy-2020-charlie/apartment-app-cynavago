@@ -102,8 +102,11 @@ class App extends React.Component {
       method: "DELETE"
     })
     .then(response => {
-      if(response.status === 200) {
+      console.log("delete response:", response.status);
+      if(response.status === 204) {
         this.componentDidMount()
+      }else {
+        alert("update unsuccesful") 
       }
       return response
     })

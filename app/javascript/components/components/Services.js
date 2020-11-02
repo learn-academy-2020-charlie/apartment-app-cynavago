@@ -29,8 +29,7 @@ class Services extends Component{
                                 <CardBody>
                                 <CardSubtitle className="card-subtitle">Search apartments</CardSubtitle>
                                 <CardText>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
+                                    Search hundreds of apartment listings and find the home you're looking for.
                                 </CardText>
                                 </CardBody>
                             </Card>
@@ -41,8 +40,7 @@ class Services extends Component{
                                 <CardBody>
                                 <CardSubtitle className="card-subtitle">Create listings</CardSubtitle>
                                 <CardText>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
+                                    Create and submit your own apartment listing to our site. Share your information with other users and allow them to contact you.
                                 </CardText>
                                 </CardBody>
                             </Card>
@@ -53,8 +51,7 @@ class Services extends Component{
                                 <CardBody>
                                 <CardSubtitle className="card-subtitle">Contact landlords</CardSubtitle>
                                 <CardText>
-                                    This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer.
+                                    Access the apartment listing of your liking and obtain the landlord's contact information.
                                 </CardText>
                                 </CardBody>
                             </Card>

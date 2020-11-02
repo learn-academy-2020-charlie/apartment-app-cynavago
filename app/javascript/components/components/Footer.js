@@ -15,9 +15,7 @@ class Footer extends Component{
                 </h6>
                 <hr className="footer-bar" style={{ width: "60px" }} />
                 <p className="footer-body">
-                  Here you can use rows and columns here to organize your footer
-                  content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit.
+                Start your apartment hunting journey with Roof. Find apartments nearby and access unique homes, experiences, and places around the world.
                 </p>
               </Col>
               <Col md="4" className="mb-4">

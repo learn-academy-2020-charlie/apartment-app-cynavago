@@ -13,6 +13,7 @@ class ApartmentsController < ApplicationController
             render json: apartment.errors, status: :unprocessable_entity
         end
     end
+
     def update
         apartment = Apartment.find(params[:id])
         apartment.update(apartment_params)
@@ -21,7 +22,6 @@ class ApartmentsController < ApplicationController
     def destroy
         apartment = Apartment.find(params[:id])
         apartment.destroy
-        redirect_to apartments_path
     end
     
     private
