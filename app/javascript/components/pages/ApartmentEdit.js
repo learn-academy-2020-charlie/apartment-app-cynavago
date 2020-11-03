@@ -133,14 +133,15 @@ class ApartmentEdit extends Component{
                             />
                         </FormGroup>
                         <br />
-                        <Button
-                            name="submit"
-                            color="secondary"
-                            onClick={ this.handleSubmit }
-                        >
-                            Submit Edit
-                        </Button>
                     </Form>
+                    <Button
+                        name="submit"
+                        color="secondary"
+                        className="edit-btn"
+                        onClick={ this.handleSubmit }
+                    >
+                        Submit Edit
+                    </Button>
                 </Container>
                 <br />
                 { this.state.success && <Redirect to={ `/show/${this.props.apartment.id}` }/> }

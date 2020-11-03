@@ -1,3 +1,4 @@
 class Apartment < ApplicationRecord
-    belongs_to :user  
+    has_one :image_elements
+    belongs_to :user
 end

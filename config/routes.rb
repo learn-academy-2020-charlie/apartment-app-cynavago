@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :apartments
+  resources :apartments do
+    resources :image_elements
+  end
+
   devise_for :users
   get '*path', to: 'home#index', constraints: ->(request){ request.format.html? }
   root to: 'home#index'
